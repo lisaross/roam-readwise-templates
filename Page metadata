@@ -1,0 +1,32 @@
+{# Variables: {{title}}, {{full_title}}, {{author}}, {{url}}, {{category}}, {{image_url}}, {{date}}, {{time}}, {{source}} (e.g. kindle, pocket) #}
+{# Documentation: https://help.readwise.io/article/112-how-can-i-customize-the-roam-export#metadata #}
+
+Metadata:: [[{{author}}]]{% if url %} | [Source]({{url}}){% endif %} | #{{category.capitalize()}}{% if document_tags %} | {% for tag in document_tags %}#[[{{tag}}]] {% endfor %} {% endif %} | #[[Readwise NEW]]
+Recommended By::
+Full Title:: {{full_title}}
+Status:: #Waiting [[📤Things to Process]] {%if category == "books" %} #[[📖 Reading List]]{% endif %}
+Tags:: #Readwise
+{% if url %}Link:: {{url}}{% endif %}
+{% if image_url %}![]({{image_url}}){% endif %}
+# Summary
+    After organizing, highlighting, and bolding the highlights, create a high-level summary #[[Progressive Summarization]]
+    What are the key ideas?
+    How can I apply this knowledge that I learned?
+    How do these ideas relate to what I already know?
+# [[💡Ideas]]
+    Note: Each idea should at least have a tag for the source page for better remixing
+# [[Transient]]
+    Note: Conceptual notes that aren't as tied to the source material. These are fodder for processing into evergreen notes.
+# [[📚Literature Notes]]
+    Note: Commentary on the book or things you don't want to forget. Maybe for use in a public mind garden. Should have a visible source reference. These are "weakly evergreen" because they're tied heavily to a single piece. Must be in your own words. These should be processed into Evergreen notes, or used as fodder for them.
+    ""Literature notes", titled after a single work and meant primarily as linkages to other more durable notes, and as targets for backlinks. I write these roughly as "outline notes," except for someone else's ideas."
+{% if category == "books" %}
+# What Does the Book Say?
+    What are the author's arguments?
+    What problems did the author solve, and what did they fail to?
+# What is the Book About?
+    **Note**: See [[How To Read a Book]]
+    What kind of book is it?
+    What is the book about in 1-2 sentences at most?
+    What problems does the author try to solve?
+{% endif %}

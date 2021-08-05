@@ -1,0 +1,4 @@
+{# Variables:{{title}}, {{full_title}}, {{author}}, {{category}} #}
+{# Documentation: https://help.readwise.io/article/112-how-can-i-customize-the-roam-export#title #}
+
+{% if category == "articles" %}Article{% elif category == "books" %}Book{% elif category == "tweets" %}Tweet{% else %}{{category|title}}{% endif %}/{{title}}
