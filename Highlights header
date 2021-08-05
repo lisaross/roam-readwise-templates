@@ -2,7 +2,6 @@
 {# Documentation: https://help.readwise.io/article/112-how-can-i-customize-the-roam-export#header #}
 {% if is_new_page %}
 Highlights::
-    Highlights first synced by #Readwise [[{{date}}]]
 {% elif has_new_highlights %}
-    New highlights added [[{{date}}]] at {{time}}
+New #Highlights added [[{{date}}]] at {{time}}
 {% endif %}
